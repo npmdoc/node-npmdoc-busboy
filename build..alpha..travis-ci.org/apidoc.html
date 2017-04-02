@@ -1,0 +1,348 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/mscdex/busboy#readme"
+
+    >busboy (v0.2.14)</a>
+</h1>
+<h4>A streaming parser for HTML form data for node.js</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.busboy">module busboy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.super_">
+            function <span class="apidocSignatureSpan">busboy.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">busboy.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.busboy.utils">module busboy.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.utils.Decoder">
+            function <span class="apidocSignatureSpan">busboy.utils.</span>Decoder
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.utils.basename">
+            function <span class="apidocSignatureSpan">busboy.utils.</span>basename
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.utils.decodeText">
+            function <span class="apidocSignatureSpan">busboy.utils.</span>decodeText
+            <span class="apidocSignatureSpan">(text, textEncoding, destEncoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.utils.parseParams">
+            function <span class="apidocSignatureSpan">busboy.utils.</span>parseParams
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.busboy" id="apidoc.module.busboy">module busboy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.super_" id="apidoc.element.busboy.super_">
+        function <span class="apidocSignatureSpan">busboy.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Writable(options) {
+  // Writable ctor is applied to Duplexes, too.
+  // `realHasInstance` is necessary because using plain `instanceof`
+  // would return false, as no `_writableState` property is attached.
+
+  // Trying to use the custom `instanceof` for Writable here will also break the
+  // Node.js LazyTransform implementation, which has a non-trivial getter for
+  // `_writableState` that would lead to infinite recursion.
+  if (!(realHasInstance.call(Writable, this)) &#x26;&#x26;
+      !(this instanceof Stream.Duplex)) {
+    return new Writable(options);
+  }
+
+  this._writableState = new WritableState(options, this);
+
+  // legacy.
+  this.writable = true;
+
+  if (options) {
+    if (typeof options.write === &#x27;function&#x27;)
+      this._write = options.write;
+
+    if (typeof options.writev === &#x27;function&#x27;)
+      this._writev = options.writev;
+  }
+
+  Stream.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.busboy.utils" id="apidoc.module.busboy.utils">module busboy.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.utils.Decoder" id="apidoc.element.busboy.utils.Decoder">
+        function <span class="apidocSignatureSpan">busboy.utils.</span>Decoder
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Decoder() {
+  this.buffer = undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.utils.basename" id="apidoc.element.busboy.utils.basename">
+        function <span class="apidocSignatureSpan">busboy.utils.</span>basename
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function basename(path) {
+  var f = splitPathPosix(path)[2];
+  if (f === path)
+    f = splitPathWindows(path)[2];
+  return f;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var Busboy = require(&#x27;busboy&#x27;);
+
+http.createServer(function(req, res) {
+if (req.method === &#x27;POST&#x27;) {
+  var busboy = new Busboy({ headers: req.headers });
+  busboy.on(&#x27;file&#x27;, function(fieldname, file, filename, encoding, mimetype) {
+    var saveTo = path.join(os.tmpDir(), path.<span class="apidocCodeKeywordSpan">basename</span>(fieldname));
+    file.pipe(fs.createWriteStream(saveTo));
+  });
+  busboy.on(&#x27;finish&#x27;, function() {
+    res.writeHead(200, { &#x27;Connection&#x27;: &#x27;close&#x27; });
+    res.end(&#x22;That&#x27;s all folks!&#x22;);
+  });
+  return req.pipe(busboy);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.utils.decodeText" id="apidoc.element.busboy.utils.decodeText">
+        function <span class="apidocSignatureSpan">busboy.utils.</span>decodeText
+        <span class="apidocSignatureSpan">(text, textEncoding, destEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decodeText(text, textEncoding, destEncoding) {
+  var ret;
+  if (text &#x26;&#x26; jsencoding.encodingExists(destEncoding)) {
+    try {
+      ret = jsencoding.TextDecoder(destEncoding)
+                      .decode(new Buffer(text, textEncoding));
+    } catch(e) {}
+  }
+  return (typeof ret === &#x27;string&#x27; ? ret : text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.utils.parseParams" id="apidoc.element.busboy.utils.parseParams">
+        function <span class="apidocSignatureSpan">busboy.utils.</span>parseParams
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseParams(str) {
+  var res = [],
+      state = &#x27;key&#x27;,
+      charset = &#x27;&#x27;,
+      inquote = false,
+      escaping = false,
+      p = 0,
+      tmp = &#x27;&#x27;;
+
+  for (var i = 0, len = str.length; i &#x3c; len; ++i) {
+    if (str[i] === &#x27;\\&#x27; &#x26;&#x26; inquote) {
+      if (escaping)
+        escaping = false;
+      else {
+        escaping = true;
+        continue;
+      }
+    } else if (str[i] === &#x27;&#x22;&#x27;) {
+      if (!escaping) {
+        if (inquote) {
+          inquote = false;
+          state = &#x27;key&#x27;;
+        } else
+          inquote = true;
+        continue;
+      } else
+        escaping = false;
+    } else {
+      if (escaping &#x26;&#x26; inquote)
+        tmp += &#x27;\\&#x27;;
+      escaping = false;
+      if ((state === &#x27;charset&#x27; || state === &#x27;lang&#x27;) &#x26;&#x26; str[i] === &#x22;&#x27;&#x22;) {
+        if (state === &#x27;charset&#x27;) {
+          state = &#x27;lang&#x27;;
+          charset = tmp.substring(1);
+        } else
+          state = &#x27;value&#x27;;
+        tmp = &#x27;&#x27;;
+        continue;
+      } else if (state === &#x27;key&#x27;
+                 &#x26;&#x26; (str[i] === &#x27;*&#x27; || str[i] === &#x27;=&#x27;)
+                 &#x26;&#x26; res.length) {
+        if (str[i] === &#x27;*&#x27;)
+          state = &#x27;charset&#x27;;
+        else
+          state = &#x27;value&#x27;;
+        res[p] = [tmp, undefined];
+        tmp = &#x27;&#x27;;
+        continue;
+      } else if (!inquote &#x26;&#x26; str[i] === &#x27;;&#x27;) {
+        state = &#x27;key&#x27;;
+        if (charset) {
+          if (tmp.length) {
+            tmp = decodeText(tmp.replace(RE_ENCODED, encodedReplacer),
+                             &#x27;binary&#x27;,
+                             charset);
+          }
+          charset = &#x27;&#x27;;
+        }
+        if (res[p] === undefined)
+          res[p] = tmp;
+        else
+          res[p][1] = tmp;
+        tmp = &#x27;&#x27;;
+        ++p;
+        continue;
+      } else if (!inquote &#x26;&#x26; (str[i] === &#x27; &#x27; || str[i] === &#x27;\t&#x27;))
+        continue;
+    }
+    tmp += str[i];
+  }
+  if (charset &#x26;&#x26; tmp.length) {
+    tmp = decodeText(tmp.replace(RE_ENCODED, encodedReplacer),
+                     &#x27;binary&#x27;,
+                     charset);
+  }
+
+  if (res[p] === undefined) {
+    if (tmp)
+      res[p] = tmp;
+  } else
+    res[p][1] = tmp;
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
