@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/mscdex/busboy#readme"
-
-    >busboy (v0.2.14)</a>
+    <a href="https://github.com/mscdex/busboy#readme">busboy (v0.2.14)</a>
 </h1>
 <h4>A streaming parser for HTML form data for node.js</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.busboy">module busboy</a><ol>
 
@@ -230,10 +223,10 @@
   this._finished = false;
 
   this.opts = opts;
-  if (opts.headers &#x26;&#x26; typeof opts.headers[&#x27;content-type&#x27;] === &#x27;string&#x27;)
+  if (opts.headers &amp;&amp; typeof opts.headers['content-type'] === 'string')
     this.parseHeaders(opts.headers);
   else
-    throw new Error(&#x27;Missing Content-Type&#x27;);
+    throw new Error('Missing Content-Type');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -260,10 +253,10 @@
   this._finished = false;
 
   this.opts = opts;
-  if (opts.headers &#x26;&#x26; typeof opts.headers[&#x27;content-type&#x27;] === &#x27;string&#x27;)
+  if (opts.headers &amp;&amp; typeof opts.headers['content-type'] === 'string')
     this.parseHeaders(opts.headers);
   else
-    throw new Error(&#x27;Missing Content-Type&#x27;);
+    throw new Error('Missing Content-Type');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -285,7 +278,7 @@
   // Trying to use the custom `instanceof` for Writable here will also break the
   // Node.js LazyTransform implementation, which has a non-trivial getter for
   // `_writableState` that would lead to infinite recursion.
-  if (!(realHasInstance.call(Writable, this)) &#x26;&#x26;
+  if (!(realHasInstance.call(Writable, this)) &amp;&amp;
       !(this instanceof Stream.Duplex)) {
     return new Writable(options);
   }
@@ -296,10 +289,10 @@
   this.writable = true;
 
   if (options) {
-    if (typeof options.write === &#x27;function&#x27;)
+    if (typeof options.write === 'function')
       this._write = options.write;
 
-    if (typeof options.writev === &#x27;function&#x27;)
+    if (typeof options.writev === 'function')
       this._writev = options.writev;
   }
 
@@ -354,10 +347,10 @@
   this._finished = false;
 
   this.opts = opts;
-  if (opts.headers &#x26;&#x26; typeof opts.headers[&#x27;content-type&#x27;] === &#x27;string&#x27;)
+  if (opts.headers &amp;&amp; typeof opts.headers['content-type'] === 'string')
     this.parseHeaders(opts.headers);
   else
-    throw new Error(&#x27;Missing Content-Type&#x27;);
+    throw new Error('Missing Content-Type');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -379,7 +372,7 @@
   // Trying to use the custom `instanceof` for Writable here will also break the
   // Node.js LazyTransform implementation, which has a non-trivial getter for
   // `_writableState` that would lead to infinite recursion.
-  if (!(realHasInstance.call(Writable, this)) &#x26;&#x26;
+  if (!(realHasInstance.call(Writable, this)) &amp;&amp;
       !(this instanceof Stream.Duplex)) {
     return new Writable(options);
   }
@@ -390,10 +383,10 @@
   this.writable = true;
 
   if (options) {
-    if (typeof options.write === &#x27;function&#x27;)
+    if (typeof options.write === 'function')
       this._write = options.write;
 
-    if (typeof options.writev === &#x27;function&#x27;)
+    if (typeof options.writev === 'function')
       this._writev = options.writev;
   }
 
@@ -418,7 +411,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, encoding, cb) {
   if (!this._parser)
-    return cb(new Error(&#x27;Not ready to parse. Missing Content-Type?&#x27;));
+    return cb(new Error('Not ready to parse. Missing Content-Type?'));
   this._parser.write(chunk, cb);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -434,9 +427,9 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">emit = function (ev) {
-  if (ev === &#x27;finish&#x27;) {
+  if (ev === 'finish') {
     if (!this._done) {
-      this._parser &#x26;&#x26; this._parser.end();
+      this._parser &amp;&amp; this._parser.end();
       return;
     } else if (this._finished) {
       return;
@@ -459,12 +452,12 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">parseHeaders = function (headers) {
   this._parser = undefined;
-  if (headers[&#x27;content-type&#x27;]) {
-    var parsed = parseParams(headers[&#x27;content-type&#x27;]),
+  if (headers['content-type']) {
+    var parsed = parseParams(headers['content-type']),
         matched, type;
-    for (var i = 0; i &#x3c; TYPES.length; ++i) {
+    for (var i = 0; i &lt; TYPES.length; ++i) {
       type = TYPES[i];
-      if (typeof type.detect === &#x27;function&#x27;)
+      if (typeof type.detect === 'function')
         matched = type.detect(parsed);
       else
         matched = type.detect.test(parsed[0]);
@@ -491,7 +484,7 @@
       return;
     }
   }
-  throw new Error(&#x27;Unsupported content type: &#x27; + headers[&#x27;content-type&#x27;]);
+  throw new Error('Unsupported content type: ' + headers['content-type']);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -533,18 +526,18 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-var Busboy = require(&#x27;busboy&#x27;);
+var Busboy = require('busboy');
 
 http.createServer(function(req, res) {
-if (req.method === &#x27;POST&#x27;) {
+if (req.method === 'POST') {
   var busboy = new Busboy({ headers: req.headers });
-  busboy.on(&#x27;file&#x27;, function(fieldname, file, filename, encoding, mimetype) {
+  busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
     var saveTo = path.join(os.tmpDir(), path.<span class="apidocCodeKeywordSpan">basename</span>(fieldname));
     file.pipe(fs.createWriteStream(saveTo));
   });
-  busboy.on(&#x27;finish&#x27;, function() {
-    res.writeHead(200, { &#x27;Connection&#x27;: &#x27;close&#x27; });
-    res.end(&#x22;That&#x27;s all folks!&#x22;);
+  busboy.on('finish', function() {
+    res.writeHead(200, { 'Connection': 'close' });
+    res.end("That's all folks!");
   });
   return req.pipe(busboy);
 ...</pre></li>
@@ -561,13 +554,13 @@ if (req.method === &#x27;POST&#x27;) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function decodeText(text, textEncoding, destEncoding) {
   var ret;
-  if (text &#x26;&#x26; jsencoding.encodingExists(destEncoding)) {
+  if (text &amp;&amp; jsencoding.encodingExists(destEncoding)) {
     try {
       ret = jsencoding.TextDecoder(destEncoding)
                       .decode(new Buffer(text, textEncoding));
     } catch(e) {}
   }
-  return (typeof ret === &#x27;string&#x27; ? ret : text);
+  return (typeof ret === 'string' ? ret : text);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -583,78 +576,78 @@ if (req.method === &#x27;POST&#x27;) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function parseParams(str) {
   var res = [],
-      state = &#x27;key&#x27;,
-      charset = &#x27;&#x27;,
+      state = 'key',
+      charset = '',
       inquote = false,
       escaping = false,
       p = 0,
-      tmp = &#x27;&#x27;;
+      tmp = '';
 
-  for (var i = 0, len = str.length; i &#x3c; len; ++i) {
-    if (str[i] === &#x27;\\&#x27; &#x26;&#x26; inquote) {
+  for (var i = 0, len = str.length; i &lt; len; ++i) {
+    if (str[i] === '\\' &amp;&amp; inquote) {
       if (escaping)
         escaping = false;
       else {
         escaping = true;
         continue;
       }
-    } else if (str[i] === &#x27;&#x22;&#x27;) {
+    } else if (str[i] === '"') {
       if (!escaping) {
         if (inquote) {
           inquote = false;
-          state = &#x27;key&#x27;;
+          state = 'key';
         } else
           inquote = true;
         continue;
       } else
         escaping = false;
     } else {
-      if (escaping &#x26;&#x26; inquote)
-        tmp += &#x27;\\&#x27;;
+      if (escaping &amp;&amp; inquote)
+        tmp += '\\';
       escaping = false;
-      if ((state === &#x27;charset&#x27; || state === &#x27;lang&#x27;) &#x26;&#x26; str[i] === &#x22;&#x27;&#x22;) {
-        if (state === &#x27;charset&#x27;) {
-          state = &#x27;lang&#x27;;
+      if ((state === 'charset' || state === 'lang') &amp;&amp; str[i] === "'") {
+        if (state === 'charset') {
+          state = 'lang';
           charset = tmp.substring(1);
         } else
-          state = &#x27;value&#x27;;
-        tmp = &#x27;&#x27;;
+          state = 'value';
+        tmp = '';
         continue;
-      } else if (state === &#x27;key&#x27;
-                 &#x26;&#x26; (str[i] === &#x27;*&#x27; || str[i] === &#x27;=&#x27;)
-                 &#x26;&#x26; res.length) {
-        if (str[i] === &#x27;*&#x27;)
-          state = &#x27;charset&#x27;;
+      } else if (state === 'key'
+                 &amp;&amp; (str[i] === '*' || str[i] === '=')
+                 &amp;&amp; res.length) {
+        if (str[i] === '*')
+          state = 'charset';
         else
-          state = &#x27;value&#x27;;
+          state = 'value';
         res[p] = [tmp, undefined];
-        tmp = &#x27;&#x27;;
+        tmp = '';
         continue;
-      } else if (!inquote &#x26;&#x26; str[i] === &#x27;;&#x27;) {
-        state = &#x27;key&#x27;;
+      } else if (!inquote &amp;&amp; str[i] === ';') {
+        state = 'key';
         if (charset) {
           if (tmp.length) {
             tmp = decodeText(tmp.replace(RE_ENCODED, encodedReplacer),
-                             &#x27;binary&#x27;,
+                             'binary',
                              charset);
           }
-          charset = &#x27;&#x27;;
+          charset = '';
         }
         if (res[p] === undefined)
           res[p] = tmp;
         else
           res[p][1] = tmp;
-        tmp = &#x27;&#x27;;
+        tmp = '';
         ++p;
         continue;
-      } else if (!inquote &#x26;&#x26; (str[i] === &#x27; &#x27; || str[i] === &#x27;\t&#x27;))
+      } else if (!inquote &amp;&amp; (str[i] === ' ' || str[i] === '\t'))
         continue;
     }
     tmp += str[i];
   }
-  if (charset &#x26;&#x26; tmp.length) {
+  if (charset &amp;&amp; tmp.length) {
     tmp = decodeText(tmp.replace(RE_ENCODED, encodedReplacer),
-                     &#x27;binary&#x27;,
+                     'binary',
                      charset);
   }
 
@@ -678,3 +671,4 @@ if (req.method === &#x27;POST&#x27;) {
     ]
 </div>
 </div>
+</body></html>
