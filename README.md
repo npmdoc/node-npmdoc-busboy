@@ -1,4 +1,7 @@
-# api documentation for  [busboy (v0.2.14)](https://github.com/mscdex/busboy#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-busboy.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-busboy) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-busboy.svg)](https://travis-ci.org/npmdoc/node-npmdoc-busboy)
+# npmdoc-busboy
+
+#### basic api documentation for  [busboy (v0.2.14)](https://github.com/mscdex/busboy#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-busboy.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-busboy) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-busboy.svg)](https://travis-ci.org/npmdoc/node-npmdoc-busboy)
+
 #### A streaming parser for HTML form data for node.js
 
 [![NPM](https://nodei.co/npm/busboy.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/busboy)
@@ -66,7 +69,8 @@
     "scripts": {
         "test": "node test/test.js"
     },
-    "version": "0.2.14"
+    "version": "0.2.14",
+    "bin": {}
 }
 ```
 
