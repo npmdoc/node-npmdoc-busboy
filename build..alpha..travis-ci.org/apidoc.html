@@ -72,9 +72,9 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.busboy.main">
-            function <span class="apidocSignatureSpan">busboy.</span>main
-            <span class="apidocSignatureSpan">(opts)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.multipart">
+            function <span class="apidocSignatureSpan">busboy.</span>multipart
+            <span class="apidocSignatureSpan">(boy, cfg)</span>
             </a>
 
         </li>
@@ -90,10 +90,28 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.busboy.toString">
-            function <span class="apidocSignatureSpan">busboy.</span>toString
-            <span class="apidocSignatureSpan">()</span>
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.urlencoded">
+            function <span class="apidocSignatureSpan">busboy.</span>urlencoded
+            <span class="apidocSignatureSpan">(boy, cfg)</span>
             </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">busboy.</span>encoding</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">busboy.</span>multipart.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">busboy.</span>urlencoded.prototype</span>
 
         </li>
 
@@ -105,13 +123,113 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.busboy.toString">module busboy.toString</a><ol>
+    <li class="apidocModuleLi"><a href="#apidoc.module.busboy.encoding">module busboy.encoding</a><ol>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.busboy.toString.toString">
-            function <span class="apidocSignatureSpan">busboy.</span>toString
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.encoding.TextDecoder">
+            function <span class="apidocSignatureSpan">busboy.encoding.</span>TextDecoder
+            <span class="apidocSignatureSpan">(opt_encoding, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.encoding.TextEncoder">
+            function <span class="apidocSignatureSpan">busboy.encoding.</span>TextEncoder
+            <span class="apidocSignatureSpan">(opt_encoding, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.encoding.encodingExists">
+            function <span class="apidocSignatureSpan">busboy.encoding.</span>encodingExists
+            <span class="apidocSignatureSpan">(label)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.busboy.multipart">module busboy.multipart</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.multipart.multipart">
+            function <span class="apidocSignatureSpan">busboy.</span>multipart
+            <span class="apidocSignatureSpan">(boy, cfg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">busboy.multipart.</span>detect</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.busboy.multipart.prototype">module busboy.multipart.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.multipart.prototype.end">
+            function <span class="apidocSignatureSpan">busboy.multipart.prototype.</span>end
             <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.multipart.prototype.write">
+            function <span class="apidocSignatureSpan">busboy.multipart.prototype.</span>write
+            <span class="apidocSignatureSpan">(chunk, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.busboy.urlencoded">module busboy.urlencoded</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.urlencoded.urlencoded">
+            function <span class="apidocSignatureSpan">busboy.</span>urlencoded
+            <span class="apidocSignatureSpan">(boy, cfg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">busboy.urlencoded.</span>detect</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.busboy.urlencoded.prototype">module busboy.urlencoded.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.urlencoded.prototype.end">
+            function <span class="apidocSignatureSpan">busboy.urlencoded.prototype.</span>end
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.busboy.urlencoded.prototype.write">
+            function <span class="apidocSignatureSpan">busboy.urlencoded.prototype.</span>write
+            <span class="apidocSignatureSpan">(data, cb)</span>
             </a>
 
         </li>
@@ -195,30 +313,148 @@
 
 
     <h2>
-        <a href="#apidoc.element.busboy.main" id="apidoc.element.busboy.main">
-        function <span class="apidocSignatureSpan">busboy.</span>main
-        <span class="apidocSignatureSpan">(opts)</span>
+        <a href="#apidoc.element.busboy.multipart" id="apidoc.element.busboy.multipart">
+        function <span class="apidocSignatureSpan">busboy.</span>multipart
+        <span class="apidocSignatureSpan">(boy, cfg)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function Busboy(opts) {
-  if (!(this instanceof Busboy))
-    return new Busboy(opts);
-  if (opts.highWaterMark !== undefined)
-    WritableStream.call(this, { highWaterMark: opts.highWaterMark });
-  else
-    WritableStream.call(this);
+    <li>description and source-code<pre class="apidocCodePre">function Multipart(boy, cfg) {
+  if (!(this instanceof Multipart))
+    return new Multipart(boy, cfg);
+  var i,
+      len,
+      self = this,
+      boundary,
+      limits = cfg.limits,
+      parsedConType = cfg.parsedConType || [],
+      defCharset = cfg.defCharset || &#x27;utf8&#x27;,
+      preservePath = cfg.preservePath,
+      fileopts = (typeof cfg.fileHwm === &#x27;number&#x27;
+                  ? { highWaterMark: cfg.fileHwm }
+                  : {});
 
-  this._done = false;
-  this._parser = undefined;
-  this._finished = false;
+  for (i = 0, len = parsedConType.length; i &#x3c; len; ++i) {
+    if (Array.isArray(parsedConType[i])
+        &#x26;&#x26; RE_BOUNDARY.test(parsedConType[i][0])) {
+      boundary = parsedConType[i][1];
+      break;
+    }
+  }
 
-  this.opts = opts;
-  if (opts.headers &#x26;&#x26; typeof opts.headers[&#x27;content-type&#x27;] === &#x27;string&#x27;)
-    this.parseHeaders(opts.headers);
-  else
-    throw new Error(&#x27;Missing Content-Type&#x27;);
-}</pre></li>
+  function checkFinished() {
+    if (nends === 0 &#x26;&#x26; finished &#x26;&#x26; !boy._done) {
+      finished = false;
+      process.nextTick(function() {
+        boy._done = true;
+        boy.emit(&#x27;finish&#x27;);
+      });
+    }
+  }
+
+  if (typeof boundary !== &#x27;string&#x27;)
+    throw new Error(&#x27;Multipart: Boundary not found&#x27;);
+
+  var fieldSizeLimit = (limits &#x26;&#x26; typeof limits.fieldSize === &#x27;number&#x27;
+                        ? limits.fieldSize
+                        : 1 * 1024 * 1024),
+      fileSizeLimit = (limits &#x26;&#x26; typeof limits.fileSize === &#x27;number&#x27;
+                       ? limits.fileSize
+                       : Infinity),
+      filesLimit = (limits &#x26;&#x26; typeof limits.files === &#x27;number&#x27;
+                    ? limits.files
+                    : Infinity),
+      fieldsLimit = (limits &#x26;&#x26; typeof limits.fields === &#x27;number&#x27;
+                     ? limits.fields
+                     : Infinity),
+      partsLimit = (limits &#x26;&#x26; typeof limits.parts === &#x27;number&#x27;
+                    ? limits.parts
+                    : Infinity);
+
+  var nfiles = 0,
+      nfields = 0,
+      nends = 0,
+      curFile,
+      curField,
+      finished = false;
+
+  this._needDrain = false;
+  this._pause = false;
+  this._cb = undefined;
+  this._nparts = 0;
+  this._boy = boy;
+
+  var parserCfg = {
+    boundary: boundary,
+    maxHeaderPairs: (limits &#x26;&#x26; limits.headerPairs)
+  };
+  if (fileopts.highWaterMark)
+    parserCfg.partHwm = fileopts.highWaterMark;
+  if (cfg.highWaterMark)
+    parserCfg.highWaterMark = cfg.highWaterMark;
+
+  this.parser = new Dicer(parserCfg);
+  this.parser.on(&#x27;drain&#x27;, function() {
+    self._needDrain = false;
+    if (self._cb &#x26;&#x26; !self._pause) {
+      var cb = self._cb;
+      self._cb = undefined;
+      cb();
+    }
+  }).on(&#x27;part&#x27;, function onPart(part) {
+    if (++self._nparts &#x3e; partsLimit) {
+      self.parser.removeListener(&#x27;part&#x27;, onPart);
+      self.parser.on(&#x27;part&#x27;, skipPart);
+      boy.hitPartsLimit = true;
+      boy.emit(&#x27;partsLimit&#x27;);
+      return skipPart(part);
+    }
+
+    // hack because streams2 _always_ doesn&#x27;t emit &#x27;end&#x27; until nextTick, so let
+    // us emit &#x27;end&#x27; early since we know the part has ended if we are already
+    // seeing the next part
+    if (curField) {
+      var field = curField;
+      field.emit(&#x27;end&#x27;);
+      field.removeAllListeners(&#x27;end&#x27;);
+    }
+
+    part.on(&#x27;header&#x27;, function(header) {
+      var contype,
+          fieldname,
+          parsed,
+          charset,
+          encoding,
+          filename,
+          nsize = 0;
+
+      if (header[&#x27;content-type&#x27;]) {
+        parsed = parseParams(header[&#x27;content-type&#x27;][0]);
+        if (parsed[0]) {
+          contype = parsed[0].toLowerCase();
+          for (i = 0, len = parsed.length; i &#x3c; len; ++i) {
+            if (RE_CHARSET.test(parsed[i][0])) {
+              charset = parsed[i][1].toLowerCase();
+              break;
+            }
+          }
+        }
+      }
+
+      if (contype === undefined)
+        contype = &#x27;text/plain&#x27;;
+      if (charset === undefined)
+        charset = defCharset;
+
+      if (header[&#x27;content-disposition&#x27;]) {
+        parsed = parseParams(header[&#x27;content-disposition&#x27;][0]);
+        if (!RE_FIELD.test(parsed[0]))
+          return skipPart(part);
+        for (i = 0, len = parsed.length; i &#x3c; len; ++i) {
+          if (RE_NAME.test(parsed[i][0])) {
+            fieldname = decodeText(parsed[i][1], &#x27;binary&#x27;, &#x27;utf8&#x27;);
+          } else if (RE_FILENAME.test(parsed[i][0])) {
+            filename = decodeText(parsed[i][1], &#x27;binary&#x27;, &#x27;utf8&#x27;); ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -265,14 +501,494 @@
 
 
     <h2>
-        <a href="#apidoc.element.busboy.toString" id="apidoc.element.busboy.toString">
-        function <span class="apidocSignatureSpan">busboy.</span>toString
+        <a href="#apidoc.element.busboy.urlencoded" id="apidoc.element.busboy.urlencoded">
+        function <span class="apidocSignatureSpan">busboy.</span>urlencoded
+        <span class="apidocSignatureSpan">(boy, cfg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function UrlEncoded(boy, cfg) {
+  if (!(this instanceof UrlEncoded))
+    return new UrlEncoded(boy, cfg);
+  var limits = cfg.limits,
+      headers = cfg.headers,
+      parsedConType = cfg.parsedConType;
+  this.boy = boy;
+
+  this.fieldSizeLimit = (limits &#x26;&#x26; typeof limits.fieldSize === &#x27;number&#x27;
+                         ? limits.fieldSize
+                         : 1 * 1024 * 1024);
+  this.fieldNameSizeLimit = (limits &#x26;&#x26; typeof limits.fieldNameSize === &#x27;number&#x27;
+                             ? limits.fieldNameSize
+                             : 100);
+  this.fieldsLimit = (limits &#x26;&#x26; typeof limits.fields === &#x27;number&#x27;
+                      ? limits.fields
+                      : Infinity);
+
+  var charset;
+  for (var i = 0, len = parsedConType.length; i &#x3c; len; ++i) {
+    if (Array.isArray(parsedConType[i])
+        &#x26;&#x26; RE_CHARSET.test(parsedConType[i][0])) {
+      charset = parsedConType[i][1].toLowerCase();
+      break;
+    }
+  }
+
+  if (charset === undefined)
+    charset = cfg.defCharset || &#x27;utf8&#x27;;
+
+  this.decoder = new Decoder();
+  this.charset = charset;
+  this._fields = 0;
+  this._state = &#x27;key&#x27;;
+  this._checkingBytes = true;
+  this._bytesKey = 0;
+  this._bytesVal = 0;
+  this._key = &#x27;&#x27;;
+  this._val = &#x27;&#x27;;
+  this._keyTrunc = false;
+  this._valTrunc = false;
+  this._hitlimit = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.busboy.encoding" id="apidoc.module.busboy.encoding">module busboy.encoding</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.encoding.TextDecoder" id="apidoc.element.busboy.encoding.TextDecoder">
+        function <span class="apidocSignatureSpan">busboy.encoding.</span>TextDecoder
+        <span class="apidocSignatureSpan">(opt_encoding, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TextDecoder(opt_encoding, options) {
+  if (!(this instanceof TextDecoder)) {
+    return new TextDecoder(opt_encoding, options);
+  }
+  opt_encoding = opt_encoding ? String(opt_encoding) : DEFAULT_ENCODING;
+  options = Object(options);
+<span class="apidocCodeCommentSpan">  /** @private */
+</span>  this._encoding = getEncoding(opt_encoding);
+  if (this._encoding === null || this._encoding.name === &#x27;replacement&#x27;)
+    throw new TypeError(&#x27;Unknown encoding: &#x27; + opt_encoding);
+
+  /** @private @type {boolean} */
+  this._streaming = false;
+  /** @private @type {boolean} */
+  this._BOMseen = false;
+  /** @private */
+  this._decoder = null;
+  /** @private @type {{fatal: boolean}=} */
+  this._options = { fatal: Boolean(options.fatal) };
+
+  if (Object.defineProperty) {
+    Object.defineProperty(
+        this, &#x27;encoding&#x27;,
+        { get: function() { return this._encoding.name; } });
+  } else {
+    this.encoding = this._encoding.name;
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+exports.parseParams = parseParams;
+
+
+function decodeText(text, textEncoding, destEncoding) {
+  var ret;
+  if (text &#x26;&#x26; jsencoding.encodingExists(destEncoding)) {
+    try {
+      ret = jsencoding.<span class="apidocCodeKeywordSpan">TextDecoder</span>(destEncoding)
+                      .decode(new Buffer(text, textEncoding));
+    } catch(e) {}
+  }
+  return (typeof ret === &#x27;string&#x27; ? ret : text);
+}
+exports.decodeText = decodeText;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.encoding.TextEncoder" id="apidoc.element.busboy.encoding.TextEncoder">
+        function <span class="apidocSignatureSpan">busboy.encoding.</span>TextEncoder
+        <span class="apidocSignatureSpan">(opt_encoding, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TextEncoder(opt_encoding, options) {
+  if (!(this instanceof TextEncoder)) {
+    return new TextEncoder(opt_encoding, options);
+  }
+  opt_encoding = opt_encoding ? String(opt_encoding) : DEFAULT_ENCODING;
+  options = Object(options);
+<span class="apidocCodeCommentSpan">  /** @private */
+</span>  this._encoding = getEncoding(opt_encoding);
+  if (this._encoding === null || (this._encoding.name !== &#x27;utf-8&#x27; &#x26;&#x26;
+                                  this._encoding.name !== &#x27;utf-16le&#x27; &#x26;&#x26;
+                                  this._encoding.name !== &#x27;utf-16be&#x27;))
+    throw new TypeError(&#x27;Unknown encoding: &#x27; + opt_encoding);
+  /** @private @type {boolean} */
+  this._streaming = false;
+  /** @private */
+  this._encoder = null;
+  /** @private @type {{fatal: boolean}=} */
+  this._options = { fatal: Boolean(options.fatal) };
+
+  if (Object.defineProperty) {
+    Object.defineProperty(
+        this, &#x27;encoding&#x27;,
+        { get: function() { return this._encoding.name; } });
+  } else {
+    this.encoding = this._encoding.name;
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.encoding.encodingExists" id="apidoc.element.busboy.encoding.encodingExists">
+        function <span class="apidocSignatureSpan">busboy.encoding.</span>encodingExists
+        <span class="apidocSignatureSpan">(label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getEncoding(label) {
+  label = String(label).trim().toLowerCase();
+  if (Object.prototype.hasOwnProperty.call(label_to_encoding, label)) {
+    return label_to_encoding[label];
+  }
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return res;
+};
+exports.parseParams = parseParams;
+
+
+function decodeText(text, textEncoding, destEncoding) {
+  var ret;
+  if (text &#x26;&#x26; jsencoding.<span class="apidocCodeKeywordSpan">encodingExists</span>(destEncoding)) {
+    try {
+      ret = jsencoding.TextDecoder(destEncoding)
+                      .decode(new Buffer(text, textEncoding));
+    } catch(e) {}
+  }
+  return (typeof ret === &#x27;string&#x27; ? ret : text);
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.busboy.multipart" id="apidoc.module.busboy.multipart">module busboy.multipart</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.multipart.multipart" id="apidoc.element.busboy.multipart.multipart">
+        function <span class="apidocSignatureSpan">busboy.</span>multipart
+        <span class="apidocSignatureSpan">(boy, cfg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Multipart(boy, cfg) {
+  if (!(this instanceof Multipart))
+    return new Multipart(boy, cfg);
+  var i,
+      len,
+      self = this,
+      boundary,
+      limits = cfg.limits,
+      parsedConType = cfg.parsedConType || [],
+      defCharset = cfg.defCharset || &#x27;utf8&#x27;,
+      preservePath = cfg.preservePath,
+      fileopts = (typeof cfg.fileHwm === &#x27;number&#x27;
+                  ? { highWaterMark: cfg.fileHwm }
+                  : {});
+
+  for (i = 0, len = parsedConType.length; i &#x3c; len; ++i) {
+    if (Array.isArray(parsedConType[i])
+        &#x26;&#x26; RE_BOUNDARY.test(parsedConType[i][0])) {
+      boundary = parsedConType[i][1];
+      break;
+    }
+  }
+
+  function checkFinished() {
+    if (nends === 0 &#x26;&#x26; finished &#x26;&#x26; !boy._done) {
+      finished = false;
+      process.nextTick(function() {
+        boy._done = true;
+        boy.emit(&#x27;finish&#x27;);
+      });
+    }
+  }
+
+  if (typeof boundary !== &#x27;string&#x27;)
+    throw new Error(&#x27;Multipart: Boundary not found&#x27;);
+
+  var fieldSizeLimit = (limits &#x26;&#x26; typeof limits.fieldSize === &#x27;number&#x27;
+                        ? limits.fieldSize
+                        : 1 * 1024 * 1024),
+      fileSizeLimit = (limits &#x26;&#x26; typeof limits.fileSize === &#x27;number&#x27;
+                       ? limits.fileSize
+                       : Infinity),
+      filesLimit = (limits &#x26;&#x26; typeof limits.files === &#x27;number&#x27;
+                    ? limits.files
+                    : Infinity),
+      fieldsLimit = (limits &#x26;&#x26; typeof limits.fields === &#x27;number&#x27;
+                     ? limits.fields
+                     : Infinity),
+      partsLimit = (limits &#x26;&#x26; typeof limits.parts === &#x27;number&#x27;
+                    ? limits.parts
+                    : Infinity);
+
+  var nfiles = 0,
+      nfields = 0,
+      nends = 0,
+      curFile,
+      curField,
+      finished = false;
+
+  this._needDrain = false;
+  this._pause = false;
+  this._cb = undefined;
+  this._nparts = 0;
+  this._boy = boy;
+
+  var parserCfg = {
+    boundary: boundary,
+    maxHeaderPairs: (limits &#x26;&#x26; limits.headerPairs)
+  };
+  if (fileopts.highWaterMark)
+    parserCfg.partHwm = fileopts.highWaterMark;
+  if (cfg.highWaterMark)
+    parserCfg.highWaterMark = cfg.highWaterMark;
+
+  this.parser = new Dicer(parserCfg);
+  this.parser.on(&#x27;drain&#x27;, function() {
+    self._needDrain = false;
+    if (self._cb &#x26;&#x26; !self._pause) {
+      var cb = self._cb;
+      self._cb = undefined;
+      cb();
+    }
+  }).on(&#x27;part&#x27;, function onPart(part) {
+    if (++self._nparts &#x3e; partsLimit) {
+      self.parser.removeListener(&#x27;part&#x27;, onPart);
+      self.parser.on(&#x27;part&#x27;, skipPart);
+      boy.hitPartsLimit = true;
+      boy.emit(&#x27;partsLimit&#x27;);
+      return skipPart(part);
+    }
+
+    // hack because streams2 _always_ doesn&#x27;t emit &#x27;end&#x27; until nextTick, so let
+    // us emit &#x27;end&#x27; early since we know the part has ended if we are already
+    // seeing the next part
+    if (curField) {
+      var field = curField;
+      field.emit(&#x27;end&#x27;);
+      field.removeAllListeners(&#x27;end&#x27;);
+    }
+
+    part.on(&#x27;header&#x27;, function(header) {
+      var contype,
+          fieldname,
+          parsed,
+          charset,
+          encoding,
+          filename,
+          nsize = 0;
+
+      if (header[&#x27;content-type&#x27;]) {
+        parsed = parseParams(header[&#x27;content-type&#x27;][0]);
+        if (parsed[0]) {
+          contype = parsed[0].toLowerCase();
+          for (i = 0, len = parsed.length; i &#x3c; len; ++i) {
+            if (RE_CHARSET.test(parsed[i][0])) {
+              charset = parsed[i][1].toLowerCase();
+              break;
+            }
+          }
+        }
+      }
+
+      if (contype === undefined)
+        contype = &#x27;text/plain&#x27;;
+      if (charset === undefined)
+        charset = defCharset;
+
+      if (header[&#x27;content-disposition&#x27;]) {
+        parsed = parseParams(header[&#x27;content-disposition&#x27;][0]);
+        if (!RE_FIELD.test(parsed[0]))
+          return skipPart(part);
+        for (i = 0, len = parsed.length; i &#x3c; len; ++i) {
+          if (RE_NAME.test(parsed[i][0])) {
+            fieldname = decodeText(parsed[i][1], &#x27;binary&#x27;, &#x27;utf8&#x27;);
+          } else if (RE_FILENAME.test(parsed[i][0])) {
+            filename = decodeText(parsed[i][1], &#x27;binary&#x27;, &#x27;utf8&#x27;); ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.busboy.multipart.prototype" id="apidoc.module.busboy.multipart.prototype">module busboy.multipart.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.multipart.prototype.end" id="apidoc.element.busboy.multipart.prototype.end">
+        function <span class="apidocSignatureSpan">busboy.multipart.prototype.</span>end
         <span class="apidocSignatureSpan">()</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
+    <li>description and source-code<pre class="apidocCodePre">end = function () {
+  var self = this;
+  if (this._nparts === 0 &#x26;&#x26; !self._boy._done) {
+    process.nextTick(function() {
+      self._boy._done = true;
+      self._boy.emit(&#x27;finish&#x27;);
+    });
+  } else if (this.parser.writable)
+    this.parser.end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var self = this;
+  if (this._nparts === 0 &#x26;&#x26; !self._boy._done) {
+    process.nextTick(function() {
+      self._boy._done = true;
+      self._boy.emit(&#x27;finish&#x27;);
+    });
+  } else if (this.parser.writable)
+    this.parser.<span class="apidocCodeKeywordSpan">end</span>();
+};
+
+function skipPart(part) {
+  part.resume();
+}
+
+function FileStream(opts) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.multipart.prototype.write" id="apidoc.element.busboy.multipart.prototype.write">
+        function <span class="apidocSignatureSpan">busboy.multipart.prototype.</span>write
+        <span class="apidocSignatureSpan">(chunk, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (chunk, cb) {
+  var r;
+  if ((r = this.parser.write(chunk)) &#x26;&#x26; !this._pause)
+    cb();
+  else {
+    this._needDrain = !r;
+    this._cb = cb;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    finished = true;
+    checkFinished();
+  });
+}
+
+Multipart.prototype.write = function(chunk, cb) {
+  var r;
+  if ((r = this.parser.<span class="apidocCodeKeywordSpan">write</span>(chunk)) &#x26;&#x26; !this._pause)
+    cb();
+  else {
+    this._needDrain = !r;
+    this._cb = cb;
+  }
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.busboy.urlencoded" id="apidoc.module.busboy.urlencoded">module busboy.urlencoded</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.urlencoded.urlencoded" id="apidoc.element.busboy.urlencoded.urlencoded">
+        function <span class="apidocSignatureSpan">busboy.</span>urlencoded
+        <span class="apidocSignatureSpan">(boy, cfg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function UrlEncoded(boy, cfg) {
+  if (!(this instanceof UrlEncoded))
+    return new UrlEncoded(boy, cfg);
+  var limits = cfg.limits,
+      headers = cfg.headers,
+      parsedConType = cfg.parsedConType;
+  this.boy = boy;
+
+  this.fieldSizeLimit = (limits &#x26;&#x26; typeof limits.fieldSize === &#x27;number&#x27;
+                         ? limits.fieldSize
+                         : 1 * 1024 * 1024);
+  this.fieldNameSizeLimit = (limits &#x26;&#x26; typeof limits.fieldNameSize === &#x27;number&#x27;
+                             ? limits.fieldNameSize
+                             : 100);
+  this.fieldsLimit = (limits &#x26;&#x26; typeof limits.fields === &#x27;number&#x27;
+                      ? limits.fields
+                      : Infinity);
+
+  var charset;
+  for (var i = 0, len = parsedConType.length; i &#x3c; len; ++i) {
+    if (Array.isArray(parsedConType[i])
+        &#x26;&#x26; RE_CHARSET.test(parsedConType[i][0])) {
+      charset = parsedConType[i][1].toLowerCase();
+      break;
+    }
+  }
+
+  if (charset === undefined)
+    charset = cfg.defCharset || &#x27;utf8&#x27;;
+
+  this.decoder = new Decoder();
+  this.charset = charset;
+  this._fields = 0;
+  this._state = &#x27;key&#x27;;
+  this._checkingBytes = true;
+  this._bytesKey = 0;
+  this._bytesVal = 0;
+  this._key = &#x27;&#x27;;
+  this._val = &#x27;&#x27;;
+  this._keyTrunc = false;
+  this._valTrunc = false;
+  this._hitlimit = false;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -283,18 +999,209 @@
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.busboy.toString" id="apidoc.module.busboy.toString">module busboy.toString</a></h1>
+<h1><a href="#apidoc.module.busboy.urlencoded.prototype" id="apidoc.module.busboy.urlencoded.prototype">module busboy.urlencoded.prototype</a></h1>
 
 
     <h2>
-        <a href="#apidoc.element.busboy.toString.toString" id="apidoc.element.busboy.toString.toString">
-        function <span class="apidocSignatureSpan">busboy.</span>toString
+        <a href="#apidoc.element.busboy.urlencoded.prototype.end" id="apidoc.element.busboy.urlencoded.prototype.end">
+        function <span class="apidocSignatureSpan">busboy.urlencoded.prototype.</span>end
         <span class="apidocSignatureSpan">()</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">end = function () {
+  if (this.boy._done)
+    return;
+
+  if (this._state === &#x27;key&#x27; &#x26;&#x26; this._key.length &#x3e; 0) {
+    this.boy.emit(&#x27;field&#x27;, decodeText(this._key, &#x27;binary&#x27;, this.charset),
+                           &#x27;&#x27;,
+                           this._keyTrunc,
+                           false);
+  } else if (this._state === &#x27;val&#x27;) {
+    this.boy.emit(&#x27;field&#x27;, decodeText(this._key, &#x27;binary&#x27;, this.charset),
+                           decodeText(this._val, &#x27;binary&#x27;, this.charset),
+                           this._keyTrunc,
+                           this._valTrunc);
+  }
+  this.boy._done = true;
+  this.boy.emit(&#x27;finish&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var self = this;
+  if (this._nparts === 0 &#x26;&#x26; !self._boy._done) {
+    process.nextTick(function() {
+      self._boy._done = true;
+      self._boy.emit(&#x27;finish&#x27;);
+    });
+  } else if (this.parser.writable)
+    this.parser.<span class="apidocCodeKeywordSpan">end</span>();
+};
+
+function skipPart(part) {
+  part.resume();
+}
+
+function FileStream(opts) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.busboy.urlencoded.prototype.write" id="apidoc.element.busboy.urlencoded.prototype.write">
+        function <span class="apidocSignatureSpan">busboy.urlencoded.prototype.</span>write
+        <span class="apidocSignatureSpan">(data, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (data, cb) {
+  if (this._fields === this.fieldsLimit) {
+    if (!this.boy.hitFieldsLimit) {
+      this.boy.hitFieldsLimit = true;
+      this.boy.emit(&#x27;fieldsLimit&#x27;);
+    }
+    return cb();
+  }
+
+  var idxeq, idxamp, i, p = 0, len = data.length;
+
+  while (p &#x3c; len) {
+    if (this._state === &#x27;key&#x27;) {
+      idxeq = idxamp = undefined;
+      for (i = p; i &#x3c; len; ++i) {
+        if (!this._checkingBytes)
+          ++p;
+        if (data[i] === 0x3D/*=*/) {
+          idxeq = i;
+          break;
+        } else if (data[i] === 0x26/*&#x26;*/) {
+          idxamp = i;
+          break;
+        }
+        if (this._checkingBytes &#x26;&#x26; this._bytesKey === this.fieldNameSizeLimit) {
+          this._hitLimit = true;
+          break;
+        } else if (this._checkingBytes)
+          ++this._bytesKey;
+      }
+
+      if (idxeq !== undefined) {
+        // key with assignment
+        if (idxeq &#x3e; p)
+          this._key += this.decoder.write(data.toString(&#x27;binary&#x27;, p, idxeq));
+        this._state = &#x27;val&#x27;;
+
+        this._hitLimit = false;
+        this._checkingBytes = true;
+        this._val = &#x27;&#x27;;
+        this._bytesVal = 0;
+        this._valTrunc = false;
+        this.decoder.reset();
+
+        p = idxeq + 1;
+      } else if (idxamp !== undefined) {
+        // key with no assignment
+        ++this._fields;
+        var key, keyTrunc = this._keyTrunc;
+        if (idxamp &#x3e; p)
+          key = (this._key += this.decoder.write(data.toString(&#x27;binary&#x27;, p, idxamp)));
+        else
+          key = this._key;
+
+        this._hitLimit = false;
+        this._checkingBytes = true;
+        this._key = &#x27;&#x27;;
+        this._bytesKey = 0;
+        this._keyTrunc = false;
+        this.decoder.reset();
+
+        if (key.length) {
+          this.boy.emit(&#x27;field&#x27;, decodeText(key, &#x27;binary&#x27;, this.charset),
+                                 &#x27;&#x27;,
+                                 keyTrunc,
+                                 false);
+        }
+
+        p = idxamp + 1;
+        if (this._fields === this.fieldsLimit)
+          return cb();
+      } else if (this._hitLimit) {
+        // we may not have hit the actual limit if there are encoded bytes...
+        if (i &#x3e; p)
+          this._key += this.decoder.write(data.toString(&#x27;binary&#x27;, p, i));
+        p = i;
+        if ((this._bytesKey = this._key.length) === this.fieldNameSizeLimit) {
+          // yep, we actually did hit the limit
+          this._checkingBytes = false;
+          this._keyTrunc = true;
+        }
+      } else {
+        if (p &#x3c; len)
+          this._key += this.decoder.write(data.toString(&#x27;binary&#x27;, p));
+        p = len;
+      }
+    } else {
+      idxamp = undefined;
+      for (i = p; i &#x3c; len; ++i) {
+        if (!this._checkingBytes)
+          ++p;
+        if (data[i] === 0x26/*&#x26;*/) {
+          idxamp = i;
+          break;
+        }
+        if (this._checkingBytes &#x26;&#x26; this._bytesVal === this.fieldSizeLimit) {
+          this._hitLimit = true;
+          break;
+        }
+        else if (this._checkingBytes)
+          ++this._bytesVal;
+      }
+
+      if (idxamp !== undefined) {
+        ++this._fields;
+        if (idxamp &#x3e; p)
+          this._val += this.decoder.write(data.toString(&#x27;binary&#x27;, p, idxamp));
+        this.boy.emit(&#x27;field&#x27;, decodeText(this._key, &#x27;binary&#x27;, this.charset),
+                               decodeText(this._val, &#x27;binary&#x27;, this.charset),
+                               this._keyTrunc,
+                               this._valTrunc);
+        this._state = &#x27;key&#x27;;
+
+        this._hitLimit = false;
+        this._checkingBytes = true;
+        this._key = &#x27;&#x27;;
+        this._bytesKey = 0;
+        this._keyTrunc = false;
+        this.decoder.reset();
+
+        p = idxamp + 1;
+        if (this._fields === this.fieldsLimit)
+          return cb();
+      } else if (this._hitLimit) {
+        // we may not have hit the actual limit if there are encoded bytes...
+        if (i &#x3e; p)
+          this._val += this.decoder.write(data.toString(&#x27;binary&#x27;, p, i));
+        p = i;
+        if ((this._val === &#x27;&#x27; &#x26;&#x26; this.fieldSizeLimit === 0)
+            || (this._bytesVal = this._val.length) === this.fieldSizeLimit) {
+          // yep, we actually d ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    finished = true;
+    checkFinished();
+  });
+}
+
+Multipart.prototype.write = function(chunk, cb) {
+  var r;
+  if ((r = this.parser.<span class="apidocCodeKeywordSpan">write</span>(chunk)) &#x26;&#x26; !this._pause)
+    cb();
+  else {
+    this._needDrain = !r;
+    this._cb = cb;
+  }
+};
+...</pre></li>
     </ul>
 
 
@@ -332,23 +1239,7 @@
     f = splitPathWindows(path)[2];
   return f;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-var Busboy = require(&#x27;busboy&#x27;);
-
-http.createServer(function(req, res) {
-if (req.method === &#x27;POST&#x27;) {
-  var busboy = new Busboy({ headers: req.headers });
-  busboy.on(&#x27;file&#x27;, function(fieldname, file, filename, encoding, mimetype) {
-    var saveTo = path.join(os.tmpDir(), path.<span class="apidocCodeKeywordSpan">basename</span>(fieldname));
-    file.pipe(fs.createWriteStream(saveTo));
-  });
-  busboy.on(&#x27;finish&#x27;, function() {
-    res.writeHead(200, { &#x27;Connection&#x27;: &#x27;close&#x27; });
-    res.end(&#x22;That&#x27;s all folks!&#x22;);
-  });
-  return req.pipe(busboy);
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
